@@ -4,3 +4,5 @@ const app = express();
 app.get("/post", (req, res) => {
   res.json({message : "Voici les données envoyer ok !"})
 })
+// Lancer le serveur
+app.listen(port, () => console.log("Le serveur a démarré au port  " + port));
