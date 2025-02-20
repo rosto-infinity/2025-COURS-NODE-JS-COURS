@@ -1,4 +1,5 @@
 const server = require('http')
+import server from 'http'
 const port = 5000;
 const app = express();
 app.get("/post", (req, res) => {
