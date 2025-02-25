@@ -17,11 +17,11 @@ const server = http.createServer((req, res) => {
     res.end('À propos');
      break;
     default:
-      res.writeHead(404, { 'Content-Type': 'text/plain ; utf-8' });
-      res.end('Page non trouvée');
+      res.writeHead(404, { 'Content-Type': 'text/html ; utf-8' });
+      res.end("<h1 style='color: red;'>Page non trouvée</h1>");
       break;
   }
-  
+
   });
   server.listen(3001, () => {
   console.log('Serveur démarré sur le port 3001 avec succès');
