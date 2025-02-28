@@ -3,7 +3,7 @@ const router = express.Router();
 
 router.get('/', (req, res) => {
   res.json({
-    message: 'Home page'
+    message: 'Home page ok'
   });
 });
 
@@ -11,7 +11,7 @@ router.get('/post', (req, res) => {
   res.json({
     id: 1,
     title: 'Mon premier post',
-    content: 'Contenu du premier post'
+    content: 'Contenu du premier post valider'
   });
 });
 export default router; // cas : ES6
