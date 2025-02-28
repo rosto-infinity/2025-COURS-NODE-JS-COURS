@@ -1,10 +1,17 @@
 import express from 'express';
+import postRoutes from './routes/post.routes.js';
+// const postRoutes = require('./routes/post.routes.js');
+
 const port = 3001;
 const app =  express();
 
-app.get('/post', (req, res) => {
-  res.send('Hello World! les dev');
-});
+app.use(express.json());
+app.use('/', postRoutes);
+app.use('/post', postRoutes);
+
+
+
+
 //lancer le serveur
 app.listen(port, () => {
   console.log(`Serveur démarré sur le port ${port} avec succès ok`);

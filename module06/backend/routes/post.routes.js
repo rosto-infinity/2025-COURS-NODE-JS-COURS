@@ -1,0 +1,19 @@
+import express from 'express';
+const router = express.Router();
+
+router.get('/', (req, res) => {
+  res.json({
+    message: 'Home page'
+  });
+});
+
+router.get('/post', (req, res) => {
+  res.json({
+    id: 1,
+    title: 'Mon premier post',
+    content: 'Contenu du premier post'
+  });
+});
+export default router; // cas : ES6
+
+// module.exports = router;  cas require: CommonJS
