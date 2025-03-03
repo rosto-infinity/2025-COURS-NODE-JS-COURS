@@ -10,7 +10,7 @@ router.get('/', (req, res) => {
 router.get('/post', (req, res) => {
   res.json({
     id: 1,
-    title: 'Mon premier post',
+    title: 'Mon premier post api',
     content: 'Contenu du premier post valider'
   });
 });
