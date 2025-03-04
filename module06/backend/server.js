@@ -3,8 +3,12 @@ import postRoutes from './routes/post.routes.js';
 // const postRoutes = require('./routes/post.routes.js');
 
 const port = 3001;
-const app =  express();
+const app = express();
 
+// Middleware pour parser le corps des requêtes x-www-form-urlencoded
+app.use(express.urlencoded({ extended: true }));
+
+// Middleware pour parser le corps des requêtes JSON
 app.use(express.json());
 app.use('/', postRoutes);
 app.use('/post', postRoutes);

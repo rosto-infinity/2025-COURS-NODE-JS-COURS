@@ -7,11 +7,9 @@ router.get('/', (req, res) => {
   });
 });
 
-router.get('/post', (req, res) => {
+router.post('/', (req, res) => {
   res.json({
-    id: 1,
-    title: 'Mon premier post api',
-    content: 'Contenu du premier post valider'
+    message: req.body.message
   });
 });
 export default router; // cas : ES6
