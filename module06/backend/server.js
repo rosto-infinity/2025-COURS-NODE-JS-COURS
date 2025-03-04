@@ -6,7 +6,7 @@ const port = 3001;
 const app = express();
 
 // Middleware pour parser le corps des requêtes x-www-form-urlencoded
-app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: false }));
 
 // Middleware pour parser le corps des requêtes JSON
 app.use(express.json());
