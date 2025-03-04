@@ -24,6 +24,19 @@ router.put('/:id', (req, res) => {
     status: 'Updated successfully' // Indicateur de succès
   });
 });
+
+
+// Route DELETE avec ID
+router.delete('/:id', (req, res) => {
+  const id = req.params.id; // Récupérer l'ID depuis l'URL
+  // Logique pour supprimer la ressource avec l'ID
+  res.json({
+    id: id, // ID de la ressource supprimée
+    status: 'Deleted successfully' // Indicateur de succès
+  });
+});
+
+
 export default router; // cas : ES6
 
 // module.exports = router;  cas require: CommonJS
