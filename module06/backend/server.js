@@ -10,8 +10,10 @@ app.use(express.urlencoded({ extended: false }));
 
 // Middleware pour parser le corps des requêtes JSON
 app.use(express.json());
+
 app.use('/', postRoutes);
 app.use('/post', postRoutes);
+app.use('/post/:id', postRoutes);
 
 
 
