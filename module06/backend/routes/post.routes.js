@@ -21,10 +21,14 @@ router.put('/:id', (req, res) => {
     status: 'updated with success',
   });
 });
-router.delete('/:id', (req, res) => {
+router.patch('/like-post/:id', (req, res) => {
   res.json({
-    message: 'Post deleted with success ' + req.params.id,
-  
+    message: 'Post like success id :' + req.params.id,
+  });
+});
+router.patch('/disliked-post/:id', (req, res) => {
+  res.json({
+    message: 'Post Disliked success id :' + req.params.id,
   });
 });
 
