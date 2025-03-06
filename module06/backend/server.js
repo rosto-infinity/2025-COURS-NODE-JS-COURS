@@ -1,4 +1,10 @@
 import express from 'express';
+
+import connectDB from './config/database.js';
+import dotenv from 'dotenv';
+dotenv.config();
+
+
 import postRoutes from './routes/post.routes.js';
 // const postRoutes = require('./routes/post.routes.js');
 
@@ -23,3 +29,4 @@ app.use('/like-post/:id', postRoutes);
 app.listen(port, () => {
   console.log(`Serveur démarré sur le port ${port} avec succès okok encore ok`);
 });
+connectDB();
