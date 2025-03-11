@@ -1,4 +1,5 @@
 import express from 'express';
+import { setPosts } from '../controllers/post.controller.js';
 const router = express.Router();
 
 router.get('/', (req, res) => {
@@ -6,13 +7,7 @@ router.get('/', (req, res) => {
     message: 'Home page 04-03-2025'
   });
 });
-router.post('/', (req, res) => {
-  res.json({
-    message: req.body.message,
-    auteur: req.body.auteur,
-    age: req.body.age,
-  });
-});
+router.post('/', setPosts);
 
 router.put('/:id', (req, res) => {
   res.json({
@@ -31,8 +26,6 @@ router.patch('/disliked-post/:id', (req, res) => {
     message: 'Post Disliked success id :' + req.params.id,
   });
 });
-
-
 
 export default router; // cas : ES6
 

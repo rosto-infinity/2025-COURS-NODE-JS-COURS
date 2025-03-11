@@ -1,12 +1,12 @@
 import express from 'express';
-
+import postRoutes from './routes/post.routes.js';
 import connectDB from './config/database.js';
+// const postRoutes = require('./routes/post.routes.js');
+
 import dotenv from 'dotenv';
 dotenv.config();
 
 
-import postRoutes from './routes/post.routes.js';
-// const postRoutes = require('./routes/post.routes.js');
 
 const port = 3001;
 const app = express();
@@ -21,9 +21,6 @@ app.use('/', postRoutes);
 app.use('/post', postRoutes);
 app.use('/post/:id', postRoutes);
 app.use('/like-post/:id', postRoutes);
-
-
-
 
 //lancer le serveur
 app.listen(port, () => {
